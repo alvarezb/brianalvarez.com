@@ -1,0 +1,4 @@
+@media {
+	.col-independent {
+    overflow-y: scroll; 
+}
