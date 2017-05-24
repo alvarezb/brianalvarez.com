@@ -13,7 +13,7 @@ className About extends Component {
 */
 
 const About = () => (
-  <div id="contact-me" role="tabpanel" className="tab-pane col-6 offset-lg-1">
+  <div>
     <h3>Contact me!</h3>
     <h4>Old school methods</h4>
     <p>Click on the link below to solve a quick captcha to reveal my real email address. I look forward to hearing from you!</p>

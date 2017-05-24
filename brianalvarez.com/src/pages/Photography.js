@@ -4,15 +4,7 @@ import _ from 'lodash';
 import $ from 'jquery';
 import Measure from 'react-measure';
 import Lightbox from 'react-images';
-
-// eslint-disable-next-line
-const images = [
-{"name": "0058", "alt":"Tesla Coil", "wl": 1200, "hl": 800, "wm": 600, "hm": 400, "ws":300, "hs": 200},
-{"name": "8299", "alt":"Tesla Coil", "wl": 1200, "hl": 800, "wm": 600, "hm": 400, "ws":300, "hs": 200},
-{"name": "8484", "alt":"Tesla Coil", "wl": 1200, "hl": 800, "wm": 600, "hm": 400, "ws":300, "hs": 200},
-{"name": "8959", "alt":"Tesla Coil", "wl": 1200, "hl": 800, "wm": 600, "hm": 400, "ws":300, "hs": 200},
-{"name": "9106", "alt":"Tesla Coil", "wl": 1200, "hl": 800, "wm": 600, "hm": 400, "ws":300, "hs": 200},
-]
+import './Photography.css';
 
 class Photography extends React.Component{
   constructor(){
@@ -168,7 +160,7 @@ class Photography extends React.Component{
   // no loading sign if its all loaded
   if (this.state.photos){
     return(
-      <div className="App">
+      <div className="Gallery">
       {this.renderGallery()}
       <Lightbox 
       images={this.state.photos}
@@ -186,7 +178,7 @@ class Photography extends React.Component{
   }
   else{
     return(
-      <div className="App">
+      <div className="Gallery">
       <div id="msg-app-loading" className="loading-msg">Loading</div>
       </div>
       );

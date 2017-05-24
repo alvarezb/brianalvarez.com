@@ -1,0 +1,11 @@
+
+.menuItem {
+	padding: 15px;
+	color: #AAA;
+	border: 2px solid #AAA;
+	border-top-right-radius: 5%;
+	border-top-left-radius: 5%;
+	border-bottom: 0px;
+	margin: 5px;
+	margin-bottom: 0px;
+}
