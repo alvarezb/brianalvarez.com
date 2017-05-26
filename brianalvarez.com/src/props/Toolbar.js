@@ -14,6 +14,7 @@ import About from '../pages/About.js'
 import MenuItem from './MenuItem.js'
 
 class Toolbar extends Component {
+
   render() {
     return (
       <div>

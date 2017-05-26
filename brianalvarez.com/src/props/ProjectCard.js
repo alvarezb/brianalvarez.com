@@ -17,9 +17,15 @@ class ProjectCard extends React.Component {
     render() {
     return (
       <div className="card">
-        <img className="card-img-top img-fluid" src={this.props.imageUrl} alt={this.props.title}/>
+        <img className="img-fluid" src={this.props.imageUrl} alt={this.props.title}/>
         <div className="card-block">
-          <h4 className="card-title"><a href={this.props.url}>{this.props.title}</a></h4>
+          <h4 className="card-title">
+            {this.props.url ? (
+              <a href={this.props.url}>{this.props.title}</a>
+            ) : (
+              this.props.title
+            )}
+          </h4>
           <p className="card-text">{this.props.children}</p>
         </div>
         <div className="card-footer">

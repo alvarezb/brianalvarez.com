@@ -1,13 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Ubuntu');
-
-
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Ubuntu', 'Lato' sans-serif;
   background-color: black;
 }
 
 p, h1, h2, h3 {
-	color: #AAA;
+  color: #AAA;
 }

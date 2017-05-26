@@ -5,6 +5,7 @@ import $ from 'jquery';
 import Measure from 'react-measure';
 import Lightbox from 'react-images';
 import './Photography.css';
+import Tracker from '../props/Tracker.js'
 
 class Photography extends React.Component{
   constructor(){
@@ -42,7 +43,6 @@ class Photography extends React.Component{
       jsonpCallback: 'jsonFlickrApi',
       cache: false,
       success: function(data) {
-        console.log(data)
         let photos = [];
         data.photoset.photo.forEach(function(obj,i,array){
           photos.push({
@@ -161,18 +161,19 @@ class Photography extends React.Component{
   if (this.state.photos){
     return(
       <div className="Gallery">
-      {this.renderGallery()}
-      <Lightbox 
-      images={this.state.photos}
-      backdropClosesModal={true}
-      onClose={this.closeLightbox}
-      onClickPrev={this.gotoPrevious}
-      onClickNext={this.gotoNext}
-      currentImage={this.state.currentImage}
-      isOpen={this.state.lightboxIsOpen}
-      width={1600}
-      />
-      {!this.state.loadedAll && <div className="loading-msg" id="msg-loading-more">Loading</div>}
+        <Tracker/>
+        {this.renderGallery()}
+        <Lightbox 
+        images={this.state.photos}
+        backdropClosesModal={true}
+        onClose={this.closeLightbox}
+        onClickPrev={this.gotoPrevious}
+        onClickNext={this.gotoNext}
+        currentImage={this.state.currentImage}
+        isOpen={this.state.lightboxIsOpen}
+        width={1600}
+        />
+        {!this.state.loadedAll && <div className="loading-msg" id="msg-loading-more">Loading</div>}
       </div>
       );
   }
