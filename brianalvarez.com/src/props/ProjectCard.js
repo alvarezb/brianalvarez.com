@@ -14,10 +14,20 @@ children: the brief project deseription, containing any other desired data
 */
 
 class ProjectCard extends React.Component {
-    render() {
+  render() {
+    var autoplay = !navigator.userAgent.match(/iPhone/i);
+    console.log(navigator.userAgent)
     return (
       <div className="card">
-        <img className="img-fluid" src={this.props.imageUrl} alt={this.props.title}/>
+        {this.props.videoUrl ? (
+            <video loop muted autoPlay={autoplay} className="img-fluid">
+              <source src={this.props.videoUrl} type="video/mp4"/>
+              Your browser does not support html5 video tags...
+            </video>
+          ) : (
+            <img className="img-fluid" src={this.props.imageUrl} alt={this.props.title}/>
+          )
+        }
         <div className="card-block">
           <h4 className="card-title">
             {this.props.url ? (

@@ -17,3 +17,19 @@ h2 {
 	padding-right: 2%;
 	vertical-align: middle;
 }
+
+@media only screen and (max-width: 550px) {
+  .menuItem {
+  	margin: 2px !important;
+  	padding: 5px !important;
+  }
+  ul {
+  	padding-left: 3px !important;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .title-name {
+  	display: none;
+  }
+}

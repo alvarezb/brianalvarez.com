@@ -13,7 +13,7 @@ class Projects extends React.Component {
         <Tracker/>
         <div>
           <h3>Personal Projects</h3>
-          <p>Sometimes I do things. Sometimes those things are cool! Occasionally, I write little blurbs about them and post them here.</p>
+          <p>I'm always working on things. Sometimes those things are cool. On occasion, I write little blurbs about the things and post them here.</p>
         </div>
         <Masonry>
             <ProjectCard title="This Website" imageUrl="files/website/2017-08-26-recursive.jpg" url="http://www.brianalvarez.com" date="Initially built in 2017">
@@ -25,26 +25,32 @@ class Projects extends React.Component {
             <ProjectCard title="Stickman Costume" imageUrl="files/stickman/IMG_0974.jpg" date="Halloween 2015">
               A halloween costume consisting of EL tape and custom made blinky LED mask - it was especially scary for intoxicated people!
             </ProjectCard>
-            <ProjectCard title="Weight-Bearing Attachment Points" imageUrl="files/bunker_points/IMG_0943_new.jpg" date="Summer 2015">
-              Two rigging points that I installed in the ceiling of a basement bomb shelter. Each point consisted of a 7/16th inch forged shoulder bolt mounted through 10" of reinforced concrete into a series of washers, the largest being over 18" in diameter.
-            </ProjectCard>
             <ProjectCard title="Granite Moon Bar" imageUrl="files/moon/IMG_0407.jpg" date="Fall 2014">
               I designed and laser engraved black granite tiles to accent an aerospace engineering friend's bar
             </ProjectCard>
             <ProjectCard title="Low Power Motor Controller" imageUrl="files/contour/IMG_20141207_215233.jpg" date="Fall 2014">
               A PSoC based custom PCB to drive a suction pump for prosthestic socket research. Includes a buck boost converter for the motor voltage, and a sleep state that only sips micro amps of current.
             </ProjectCard>
-            <ProjectCard title="Sample Card" imageUrl="http://placehold.it/600x400" url="files/sample.html" date="Mocked up in 2017">
-                This is a longer card with supporting text below as a natural lead-in to additional content. This content is a <em>little</em> bit longer.
+            <ProjectCard title="Automated Queen Bed" videoUrl="files/bed/IMG_0133.mp4" date="Fall 2013">
+              I suspended a queen size bed from an ATV winch driven by a motorcycle battery and a car starter relay. The bed rests onto legs when lowered, so it is stable for "active" sleeping. Additionally, there are sensors on the bed to trigger changes to the room lighting.
             </ProjectCard>
-            <ProjectCard title="Sample Card" imageUrl="http://placehold.it/600x400" url="files/sample.html" date="Mocked up in 2017">
-                This is a longer card with supporting text below as a natural lead-in to additional content. This content is a <em>little</em> bit longer.
+            <ProjectCard title="Carbon Fiber Wands" imageUrl="files/wicked_sticks/IMG_2847.jpg" date="8/2016">
+              Unique wands made from carbon fiber wands with handles wrapped in cord and then plasticized
             </ProjectCard>
-            <ProjectCard title="Sample Card" imageUrl="http://placehold.it/600x400" url="files/sample.html" date="Mocked up in 2017">
-                This is a longer card with supporting text below as a natural lead-in to additional content. This content is a <em>little</em> bit longer.
+            <ProjectCard title="Installing Aftermarket Motorcycle Headlights" imageUrl="files/moto_headlight/IMG_1627.jpg" date="Installed 9/2015">
+              I purchased a bi-xenon projecter headlight module from China, which arrived with no documentation or wiring diagram. Figuring out how to install it on my motorcycle as an adventure!
             </ProjectCard>
-            <ProjectCard title="Sample Card" imageUrl="http://placehold.it/600x400" url="files/sample.html" date="Mocked up in 2017">
-                This is a longer card with supporting text below as a natural lead-in to additional content. This content is a <em>little</em> bit longer.
+            <ProjectCard title="Volunteering for the Boston Marathon" imageUrl="files/volunteering/BAAVolunteering.jpg" date="4/20/2015">
+              With a group of fraterntiy brothers, I volunteered for the 119th Boston Marathon, helping run a water station for thirsty runners.
+            </ProjectCard>
+            <ProjectCard title="Quadcopter" imageUrl="files/quadcopter/quadcopter.jpg" date="Spring 2014">
+              I designed and manufactured a quadcopter frame. Made from bent aluminum sheets, aluminum tubing and custom milled mounting brackets. As evidenced by the bent arm, I'm a better engineer than pilot.
+            </ProjectCard>
+            <ProjectCard title="Integrated-Swivel Suspension Ring" imageUrl="files/suspensionRing.jpg" date="10/2016">
+              I commissioned BondsOfSteel to weld a suspension ring into a RockExotica SwivaEye auto-locking carabiner for more effecient use of vertical space (while still enabling spinning!)
+            </ProjectCard>
+            <ProjectCard title="Weight-Bearing Attachment Points" imageUrl="files/bunker_points/IMG_0943_new.jpg" date="Summer 2015">
+              Two rigging points that I installed in the ceiling of a basement bomb shelter. Each point consisted of a 7/16th inch forged shoulder bolt mounted through 10" of reinforced concrete into a series of washers, the largest being over 18" in diameter.
             </ProjectCard>
         </Masonry>
 

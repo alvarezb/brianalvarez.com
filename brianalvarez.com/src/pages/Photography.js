@@ -76,45 +76,6 @@ class Photography extends React.Component{
       }
     });
   }
-  /*
-    loadMorePhotos(e){
-    if (e){
-      e.preventDefault();
-    }
-    if (this.state.pageNum > this.state.totalPages){
-      this.setState({loadedAll: true});
-      return;
-    }
-        let photos = [];
-        images.forEach(function(obj,i,array){
-          let aspectRatio = parseFloat(obj.wl / obj.hl);
-          photos.push({
-            src: (aspectRatio >= 3) ? obj.url_c : obj.url_m,
-                    // eslint-disable-next-line
-                    width: parseInt(obj.ws),
-                    // eslint-disable-next-line
-                    height: parseInt(obj.hs),
-                    caption: obj.title,
-                    alt: obj.title,
-                    srcset:[ 
-                    'images/'+obj.name+'-lg.jpg '+obj.wl+'w',
-                    'images/'+obj.name+'-md.jpg '+obj.wm+'w',
-                    'images/'+obj.name+'-sm.jpg '+obj.ws+'w',
-                    ],
-                    sizes:[
-                    '(min-width: 480px) 50vw',
-                    '(min-width: 1024px) 33.3vw',
-                    '100vw'
-                    ]  
-                  });
-        })
-        this.setState({
-          photos: this.state.photos ? this.state.photos.concat(photos) : photos,
-          pageNum: this.state.pageNum + 1,
-          //totalPages: data.photoset.pages
-        });
-  }
-  */
   openLightbox(index, event){
     event.preventDefault();
     this.setState({
@@ -147,8 +108,11 @@ class Photography extends React.Component{
           if (width >= 480){
             cols = 2;
           }
-          if (width >= 1024){
+          if (width >= 640){
             cols = 3;
+          }
+          if (width >= 1024){
+            cols = 4;
           }
           return <Gallery photos={this.state.photos} cols={cols} onClickPhoto={this.openLightbox} />
         }

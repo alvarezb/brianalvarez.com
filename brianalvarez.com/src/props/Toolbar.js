@@ -25,7 +25,7 @@ class Toolbar extends Component {
             <li><Link to="/photography"><MenuItem>Photography</MenuItem></Link></li>
             <li><Link to="/about"><MenuItem>About me</MenuItem></Link></li>
           </ul>
-          <h2>Brian Alvarez</h2>
+          <h2 className="title-name ">Brian Alvarez</h2>
           <hr/>
         </div>
         <div>
