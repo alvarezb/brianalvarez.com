@@ -51,8 +51,9 @@ class Photography extends React.Component{
       this.setState({loadedAll: true});
       return;
     }
+    var photoset_id = (this.props.match.params.type in this.map) ? this.map[this.props.match.params.type] : this.map["circus"]
     $.ajax({
-      url: 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=7bfd5b3a1565cc08941231f01555d959&photoset_id='+this.map[this.props.match.params.type]+'&user_id=143354752@N07&format=json&per_page=21&page='+this.state.pageNum+'&extras=url_m,url_c,url_l,url_h,url_o',
+      url: 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=7bfd5b3a1565cc08941231f01555d959&photoset_id='+photoset_id+'&user_id=143354752@N07&format=json&per_page=21&page='+this.state.pageNum+'&extras=url_m,url_c,url_l,url_h,url_o',
       dataType: 'jsonp',
       jsonpCallback: 'jsonFlickrApi',
       cache: false,

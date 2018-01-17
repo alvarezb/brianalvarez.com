@@ -40,6 +40,7 @@ class Toolbar extends Component {
           {/*
           <Route exact path="/projects" component={Projects}/>
         */}
+          <Route exact path="/photography" component={Photography}/>
           <Route exact path="/photography/:type" component={Photography}/>
           <Route exact path="/about" component={About}/>
         </div>
