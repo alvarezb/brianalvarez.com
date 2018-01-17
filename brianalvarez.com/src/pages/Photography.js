@@ -10,6 +10,13 @@ import Tracker from '../props/Tracker.js'
 class Photography extends React.Component{
   constructor(){
     super();
+    /*this is probably the wrong way to do this*/
+    this.map = {};
+    this.map["circus"] =     '72157680618369974';
+    this.map["portraits"] =  '72157691566780884';
+    this.map["events"] =     '72157668562573799';
+    this.map["others"] =     '72157662718136437';
+
     this.state = {photos:null, pageNum:1, totalPages:1, loadedAll: false, currentImage:0};
     this.handleScroll = this.handleScroll.bind(this);
     this.loadMorePhotos = this.loadMorePhotos.bind(this);
@@ -18,6 +25,13 @@ class Photography extends React.Component{
     this.gotoNext = this.gotoNext.bind(this);
     this.gotoPrevious = this.gotoPrevious.bind(this);
   }
+  componentWillReceiveProps(newProps){
+    //console.log(newProps);
+    this.state = {photos:null, pageNum:1, totalPages:1, loadedAll: false, currentImage:0};
+    this.componentDidMount();
+
+  }
+
   componentDidMount() {
     this.loadMorePhotos();
     this.loadMorePhotos = _.debounce(this.loadMorePhotos, 200);
@@ -38,7 +52,7 @@ class Photography extends React.Component{
       return;
     }
     $.ajax({
-      url: 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=7bfd5b3a1565cc08941231f01555d959&photoset_id=72157680618369974&user_id=143354752@N07&format=json&per_page=21&page='+this.state.pageNum+'&extras=url_m,url_c,url_l,url_h,url_o',
+      url: 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=7bfd5b3a1565cc08941231f01555d959&photoset_id='+this.map[this.props.match.params.type]+'&user_id=143354752@N07&format=json&per_page=21&page='+this.state.pageNum+'&extras=url_m,url_c,url_l,url_h,url_o',
       dataType: 'jsonp',
       jsonpCallback: 'jsonFlickrApi',
       cache: false,
